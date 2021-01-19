@@ -1,0 +1,6 @@
+<datacollection-group name="NetApp Vserver Stats">
+  <resourceType name="NetAppVserverStatsXML" label="NetApp SVM Performance" resourceLabel="SVM ${index}" >
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+  </resourceType>
+</datacollection-group>

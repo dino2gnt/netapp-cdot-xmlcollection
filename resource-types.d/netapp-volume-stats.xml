@@ -1,0 +1,6 @@
+<datacollection-group name="NetApp Volume Stats">
+  <resourceType name="NetAppVolumeStatsXML" label="NetApp Volume Performance" resourceLabel="Volume ${index}" >
+      <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+      <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+  </resourceType>
+</datacollection-group>
