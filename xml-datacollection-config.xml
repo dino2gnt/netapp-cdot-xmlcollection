@@ -1,0 +1,200 @@
+<xml-datacollection-config rrdRepository="/opt/opennms/share/rrd/snmp/" xmlns="http://xmlns.opennms.org/xsd/config/xml-datacollection">
+
+    <xml-collection name="netapp-stats">
+        <rrd step="300">
+            <rra>RRA:AVERAGE:0.5:1:2016</rra>
+            <rra>RRA:AVERAGE:0.5:12:1488</rra>
+            <rra>RRA:AVERAGE:0.5:288:366</rra>
+            <rra>RRA:MAX:0.5:288:366</rra>
+            <rra>RRA:MIN:0.5:288:366</rra>
+        </rrd>
+        <xml-source url="https://{ipaddr}:443/servlets/netapp.servlets.admin.XMLrequest_filer">
+            <request method="POST">
+              <parameter name="disable-ssl-verification" value="true"/>
+              <header name="Authorization" value="Basic YWhdfjkfdjnhsdhhjhd=="/>
+              <content type="application/xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<netapp  xmlns="http://www.netapp.com/filer/admin" version="1.120">
+  <snapmirror-get-iter>
+    <desired-attributes>
+      <snapmirror-info>
+        <break-failed-count></break-failed-count>
+        <break-successful-count></break-successful-count>
+        <current-max-transfer-rate></current-max-transfer-rate>
+        <current-operation-id></current-operation-id>
+        <current-transfer-error></current-transfer-error>
+        <current-transfer-priority></current-transfer-priority>
+        <current-transfer-type></current-transfer-type>
+        <destination-cluster></destination-cluster>
+        <destination-location></destination-location>
+        <destination-volume></destination-volume>
+        <destination-volume-node></destination-volume-node>
+        <destination-vserver></destination-vserver>
+        <destination-vserver-uuid></destination-vserver-uuid>
+        <exported-snapshot></exported-snapshot>
+        <exported-snapshot-timestamp></exported-snapshot-timestamp>
+        <file-restore-file-count></file-restore-file-count>
+        <file-restore-file-list></file-restore-file-list>
+        <identity-preserve></identity-preserve>
+        <is-constituent></is-constituent>
+        <is-healthy></is-healthy>
+        <lag-time></lag-time>
+        <last-transfer-duration></last-transfer-duration>
+        <last-transfer-end-timestamp></last-transfer-end-timestamp>
+        <last-transfer-error></last-transfer-error>
+        <last-transfer-error-codes></last-transfer-error-codes>
+        <last-transfer-from></last-transfer-from>
+        <last-transfer-network-compression-ratio></last-transfer-network-compression-ratio>
+        <last-transfer-size></last-transfer-size>
+        <last-transfer-type></last-transfer-type>
+        <max-transfer-rate></max-transfer-rate>
+        <mirror-state></mirror-state>
+        <network-compression-ratio></network-compression-ratio>
+        <newest-snapshot></newest-snapshot>
+        <newest-snapshot-timestamp></newest-snapshot-timestamp>
+        <opmask></opmask>
+        <policy></policy>
+        <policy-type></policy-type>
+        <progress-last-updated></progress-last-updated>
+        <relationship-control-plane></relationship-control-plane>
+        <relationship-group-type></relationship-group-type>
+        <relationship-id></relationship-id>
+        <relationship-progress></relationship-progress>
+        <relationship-status></relationship-status>
+        <relationship-type></relationship-type>
+        <resync-failed-count></resync-failed-count>
+        <resync-successful-count></resync-successful-count>
+        <schedule></schedule>
+        <snapshot-checkpoint></snapshot-checkpoint>
+        <snapshot-progress></snapshot-progress>
+        <source-cluster></source-cluster>
+        <source-location></source-location>
+        <source-volume></source-volume>
+        <source-vserver></source-vserver>
+        <source-vserver-uuid></source-vserver-uuid>
+        <total-transfer-bytes></total-transfer-bytes>
+        <total-transfer-time-secs></total-transfer-time-secs>
+        <transfer-snapshot></transfer-snapshot>
+        <tries></tries>
+        <unhealthy-reason></unhealthy-reason>
+        <update-failed-count></update-failed-count>
+        <update-successful-count></update-successful-count>
+        <vserver></vserver>
+      </snapmirror-info>
+    </desired-attributes>
+    <expand>true</expand>
+    <max-records>500</max-records>
+    <query>
+      <snapmirror-info>
+      </snapmirror-info>
+    </query>
+    <tag></tag>
+  </snapmirror-get-iter>
+</netapp>]]></content>
+            </request>
+            <import-groups>xml-datacollection/netapp-snapmirror-stats.xml</import-groups>
+        </xml-source>
+
+        <xml-source url="https://{ipaddr}:443/servlets/netapp.servlets.admin.XMLrequest_filer">
+            <request method="POST">
+              <parameter name="disable-ssl-verification" value="true"/>
+              <header name="Authorization" value="Basic YWjkdldfkjdfhjklde=="/>
+              <content type="application/xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<netapp  xmlns="http://www.netapp.com/filer/admin" version="1.120">
+  <perf-object-get-instances>
+    <counters>
+      <counter>instance_name</counter>
+      <counter>cifs_ops</counter>
+      <counter>nfs_ops</counter>
+      <counter>iscsi_ops</counter>
+      <counter>system_ops</counter>
+      <counter>other_ops</counter>
+      <counter>read_ops</counter>
+      <counter>write_ops</counter>
+      <counter>read_data</counter>
+      <counter>write_data</counter>
+      <counter>write_latency</counter>
+      <counter>read_latency</counter>
+      <counter>total_latency</counter>
+      <counter>partner_ops</counter>
+      <counter>fcp_ops</counter>
+      <counter>disk_data_read</counter>
+      <counter>disk_data_written</counter>
+    </counters>
+    <filter-data></filter-data>
+    <instance-uuids>
+      <instance-uuid></instance-uuid>
+    </instance-uuids>
+    <instances>
+      <instance></instance>
+    </instances>
+    <max>500</max>
+    <objectname>system:node</objectname>
+    <privilege-level></privilege-level>
+    <sample-id></sample-id>
+    <sort-key></sort-key>
+    <sort-order>descending</sort-order>
+  </perf-object-get-instances>
+</netapp>]]></content>
+            </request>
+            <import-groups>xml-datacollection/netapp-node-stats.xml</import-groups>
+        </xml-source>
+
+        <xml-source url="https://{ipaddr}:443/servlets/netapp.servlets.admin.XMLrequest_filer">
+            <request method="POST">
+              <parameter name="disable-ssl-verification" value="true"/>
+              <header name="Authorization" value="Basic YWedjjkdjhdhsdjhkknh=="/>
+              <content type="application/xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<netapp  xmlns="http://www.netapp.com/filer/admin" version="1.120">
+  <perf-object-get-instances>
+    <counters></counters>
+    <filter-data></filter-data>
+    <instance-uuids>
+      <instance-uuid></instance-uuid>
+    </instance-uuids>
+    <instances>
+      <instance></instance>
+    </instances>
+    <max>500</max>
+    <objectname>volume:vserver</objectname>
+    <privilege-level></privilege-level>
+    <sample-id></sample-id>
+    <sort-key></sort-key>
+    <sort-order>descending</sort-order>
+  </perf-object-get-instances>
+</netapp>]]></content>
+
+            </request>
+            <import-groups>xml-datacollection/netapp-vserver-stats.xml</import-groups>
+        </xml-source>
+
+        <xml-source url="https://{ipaddr}:443/servlets/netapp.servlets.admin.XMLrequest_filer">
+            <request method="POST">
+              <parameter name="disable-ssl-verification" value="true"/>
+              <header name="Authorization" value="Basic YWrraFgh36s5M0JV78dnYg=="/>
+              <content type="application/xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<netapp  xmlns="http://www.netapp.com/filer/admin" version="1.120">
+  <perf-object-get-instances>
+    <counters></counters>
+    <filter-data></filter-data>
+    <instance-uuids>
+      <instance-uuid></instance-uuid>
+    </instance-uuids>
+    <instances>
+      <instance></instance>
+    </instances>
+    <max>500</max>
+    <objectname>volume</objectname>
+    <privilege-level></privilege-level>
+    <sample-id></sample-id>
+    <sort-key></sort-key>
+    <sort-order>descending</sort-order>
+  </perf-object-get-instances>
+</netapp>]]></content>
+
+            </request>
+            <import-groups>xml-datacollection/netapp-volume-stats.xml</import-groups>
+        </xml-source>
+
+    </xml-collection>
+
+</xml-datacollection-config>

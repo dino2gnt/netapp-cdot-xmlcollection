@@ -1,0 +1,13 @@
+= NetApp http api xml collection for OpenNMS
+
+== Installation
+Clone this, merge it with your config.  There's some hacky requirement on the NetApp api regarding the dtd needing to exist in /etc (iirc) so if you see errors about namespaces
+and such, copy the netapp_gx.dtd included here to /etc/netapp_gx.dtd on your opennms server and/or minions.
+
+== Configuration
+We authenticate using Basic auth, so you'll need to update the Authorization header in xml-datacollection-config.xml to use the correct credentials, for all three collection groups.
+
+== Graphs
+There are none included, and I dont have access to the Grafana graphs I built for this.  Sorry :(
+
+

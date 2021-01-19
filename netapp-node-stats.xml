@@ -1,0 +1,200 @@
+<!--
+     <?xml version='1.0' encoding='UTF-8' ?>
+<netapp version='1.120' xmlns='http://www.netapp.com/filer/admin'>
+
+	<results status='passed'>
+		<instances>
+			<instance-data>
+				<aggregation>
+					<aggregation-data>
+						<constituent-count>1</constituent-count>
+						<result>complete_aggregation</result>
+					</aggregation-data>
+				</aggregation>
+				<counters>
+					<counter-data>
+						<name>cifs_ops</name>
+						<value>228870370</value>
+					</counter-data>
+					<counter-data>
+						<name>disk_data_read</name>
+						<value>1159678462604</value>
+					</counter-data>
+					<counter-data>
+						<name>disk_data_written</name>
+						<value>39838813136</value>
+					</counter-data>
+					<counter-data>
+						<name>fcp_ops</name>
+						<value>0</value>
+					</counter-data>
+					<counter-data>
+						<name>instance_name</name>
+						<value>houna22-01</value>
+					</counter-data>
+					<counter-data>
+						<name>iscsi_ops</name>
+						<value>93203114</value>
+					</counter-data>
+					<counter-data>
+						<name>nfs_ops</name>
+						<value>3254595056</value>
+					</counter-data>
+					<counter-data>
+						<name>other_ops</name>
+						<value>2261323314</value>
+					</counter-data>
+					<counter-data>
+						<name>partner_ops</name>
+						<value>0</value>
+					</counter-data>
+					<counter-data>
+						<name>read_data</name>
+						<value>21610760142463</value>
+					</counter-data>
+					<counter-data>
+						<name>read_latency</name>
+						<value>188746361194</value>
+					</counter-data>
+					<counter-data>
+						<name>read_ops</name>
+						<value>613313698</value>
+					</counter-data>
+					<counter-data>
+						<name>system_ops</name>
+						<value>5052916775</value>
+					</counter-data>
+					<counter-data>
+						<name>total_latency</name>
+						<value>748676370976</value>
+					</counter-data>
+					<counter-data>
+						<name>write_data</name>
+						<value>18986707429543</value>
+					</counter-data>
+					<counter-data>
+						<name>write_latency</name>
+						<value>558960684883</value>
+					</counter-data>
+					<counter-data>
+						<name>write_ops</name>
+						<value>702031528</value>
+					</counter-data>
+				</counters>
+				<name>houna22-01</name>
+				<sort-id>0</sort-id>
+				<uuid>693abd59-9952-11e7-b143-e71be76a24cb</uuid>
+			</instance-data>
+			<instance-data>
+				<aggregation>
+					<aggregation-data>
+						<constituent-count>1</constituent-count>
+						<result>complete_aggregation</result>
+					</aggregation-data>
+				</aggregation>
+				<counters>
+					<counter-data>
+						<name>cifs_ops</name>
+						<value>326907946</value>
+					</counter-data>
+					<counter-data>
+						<name>disk_data_read</name>
+						<value>3347103007792</value>
+					</counter-data>
+					<counter-data>
+						<name>disk_data_written</name>
+						<value>59869706384</value>
+					</counter-data>
+					<counter-data>
+						<name>fcp_ops</name>
+						<value>0</value>
+					</counter-data>
+					<counter-data>
+						<name>instance_name</name>
+						<value>houna22-02</value>
+					</counter-data>
+					<counter-data>
+						<name>iscsi_ops</name>
+						<value>10207</value>
+					</counter-data>
+					<counter-data>
+						<name>nfs_ops</name>
+						<value>855995047</value>
+					</counter-data>
+					<counter-data>
+						<name>other_ops</name>
+						<value>772054130</value>
+					</counter-data>
+					<counter-data>
+						<name>partner_ops</name>
+						<value>0</value>
+					</counter-data>
+					<counter-data>
+						<name>read_data</name>
+						<value>14024188732173</value>
+					</counter-data>
+					<counter-data>
+						<name>read_latency</name>
+						<value>783914943609</value>
+					</counter-data>
+					<counter-data>
+						<name>read_ops</name>
+						<value>223571862</value>
+					</counter-data>
+					<counter-data>
+						<name>system_ops</name>
+						<value>1316234974</value>
+					</counter-data>
+					<counter-data>
+						<name>total_latency</name>
+						<value>1000692647413</value>
+					</counter-data>
+					<counter-data>
+						<name>write_data</name>
+						<value>11892176429753</value>
+					</counter-data>
+					<counter-data>
+						<name>write_latency</name>
+						<value>216777477126</value>
+					</counter-data>
+					<counter-data>
+						<name>write_ops</name>
+						<value>187287208</value>
+					</counter-data>
+				</counters>
+				<name>houna22-02</name>
+				<sort-id>0</sort-id>
+				<uuid>69d82e11-9952-11e7-8d0c-2f084598a489</uuid>
+			</instance-data>
+		</instances>
+		<timestamp>1516717456</timestamp>
+	</results>
+</netapp>
+
+
+-->
+
+<xml-groups>
+  <xml-group
+    name="netapp-node-stats" 
+    resource-type="NetAppNodeStatsXML"
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()">
+    <xml-object name="cifsops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfsops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsiops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="systemops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='system_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="otherops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='other_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="readops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='read_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="writeops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='write_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="readdata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='read_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="writedata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='write_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="write_lat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='write_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="read_lat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='read_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="total_lat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='total_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="partnerops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='partner_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fcops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="diskdatar" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='disk_data_read']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="diskdataw" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='disk_data_written']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+  </xml-group>
+</xml-groups>

@@ -1,0 +1,69 @@
+<!--
+ Response is like:
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE netapp SYSTEM 'file:/etc/netapp_gx.dtd'>
+<netapp version='1.120' xmlns='http://www.netapp.com/filer/admin'>
+<results status="passed">
+<attributes-list>
+<snapmirror-info>
+<break-failed-count>0</break-failed-count>
+<break-successful-count>0</break-successful-count>
+<destination-location>lonfs32:DR_HOU_houfs40_vol_win_group_data_SM</destination-location>
+<destination-volume>DR_HOU_houfs40_vol_win_group_data_SM</destination-volume>
+<destination-volume-node>lonna21-02</destination-volume-node>
+<destination-vserver>lonfs32</destination-vserver>
+<destination-vserver-uuid>d7c4e93e-b970-11e7-ad46-00a098b7e91b</destination-vserver-uuid>
+<exported-snapshot>snapmirror.d7c4e93e-b970-11e7-ad46-00a098b7e91b_2156242688.2018-01-19_181500</exported-snapshot>
+<exported-snapshot-timestamp>1516385724</exported-snapshot-timestamp>
+<is-constituent>false</is-constituent>
+<is-healthy>true</is-healthy>
+<lag-time>24340</lag-time>
+<last-transfer-duration>120</last-transfer-duration>
+<last-transfer-end-timestamp>1516385821</last-transfer-end-timestamp>
+<last-transfer-from>houfs40_SAS:vol_win_group_data</last-transfer-from>
+<last-transfer-network-compression-ratio>1:1</last-transfer-network-compression-ratio>
+<last-transfer-size>3403911168</last-transfer-size>
+<last-transfer-type>update</last-transfer-type>
+<max-transfer-rate>0</max-transfer-rate>
+<mirror-state>snapmirrored</mirror-state>
+<newest-snapshot>snapmirror.d7c4e93e-b970-11e7-ad46-00a098b7e91b_2156242688.2018-01-19_181500</newest-snapshot>
+<newest-snapshot-timestamp>1516385724</newest-snapshot-timestamp>
+<opmask>18446744073709551615</opmask>
+<policy>DPDefault</policy>
+<policy-type>async_mirror</policy-type>
+<relationship-control-plane>v2</relationship-control-plane>
+<relationship-group-type>none</relationship-group-type>
+<relationship-id>cf7fc196-f30c-11e7-ad46-00a098b7e91b</relationship-id>
+<relationship-status>idle</relationship-status>
+<relationship-type>data_protection</relationship-type>
+<resync-failed-count>0</resync-failed-count>
+<resync-successful-count>0</resync-successful-count>
+<schedule>8hour</schedule>
+<source-location>houfs40_SAS:vol_win_group_data</source-location>
+<source-volume>vol_win_group_data</source-volume>
+<source-vserver>houfs40_SAS</source-vserver>
+<source-vserver-uuid>be700cb3-9c98-11e7-8120-00a098bc301d</source-vserver-uuid>
+<total-transfer-bytes>4481519841280</total-transfer-bytes>
+<total-transfer-time-secs>22551</total-transfer-time-secs>
+<update-failed-count>0</update-failed-count>
+<update-successful-count>39</update-successful-count>
+<vserver>lonfs32</vserver>
+</snapmirror-info>
+</attributes-list>
+<num-records>1</num-records>
+</results>
+</netapp>
+-->
+
+<xml-groups>
+ <xml-group name="netapp-snapmirror-xml" resource-type="NetAppSnapMirrorXML" 
+	resource-xpath="/*[local-name()='netapp']/*[local-name()='results']/*[local-name()='attributes-list']/*[local-name()='snapmirror-info']" 
+	key-xpath="*[local-name()='relationship-id']">
+      <xml-object name="SrcLoc" type="string" xpath="*[local-name()='source-location']" /> 
+      <xml-object name="DstLoc" type="string" xpath="*[local-name()='destination-location']" /> 
+      <xml-object name="isHealthy" type="STRING" xpath="*[local-name()='is-healthy']" /> 
+      <xml-object name="LagTime" type="GAUGE" xpath="*[local-name()='lag-time']" /> 
+      <xml-object name="LastDurat" type="GAUGE" xpath="*[local-name()='last-transfer-duration']" /> 
+      <xml-object name="LastTransSz" type="GAUGE" xpath="*[local-name()='last-transfer-size']" />
+    </xml-group>
+</xml-groups>

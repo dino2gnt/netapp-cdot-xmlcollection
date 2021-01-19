@@ -1,0 +1,129 @@
+<xml-groups>
+  <xml-group
+    name="netapp-volume-stats-wafl"
+    resource-type="NetAppVolumeStatsXML"
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()"> 
+    <xml-object name="wafl_accesslat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='access_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_accessops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='access_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_avg_lat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='avg_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_getattrops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='getattr_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_getattrlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='getattr_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_lookuplat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='lookup_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_lookupops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='lookup_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_otherlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='other_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_otherops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='other_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_readdata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='read_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_readlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='read_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_readops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='read_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_writedata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='write_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_writelat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='write_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="wafl_writeops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='write_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+  </xml-group>
+
+  <xml-group
+    name="netapp-volume-stats-nfs"
+    resource-type="NetAppVolumeStatsXML"
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()"> 
+    <xml-object name="nfs_accesslat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_access_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_accessops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_access_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_getattrlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_getattr_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_getattrops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_getattr_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_lookuplat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_lookup_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_lookupops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_lookup_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_otherlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_other_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_otherops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_other_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_readdata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_read_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_readlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_read_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_readops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_read_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_totalops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_total_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_writedata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_write_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_writelat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_write_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="nfs_writeops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='nfs_write_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+  </xml-group>
+
+  <xml-group
+    name="netapp-volume-stats-cifs"
+    resource-type="NetAppVolumeStatsXML"
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()"> 
+    <xml-object name="cifs_accesslat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_access_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_accessops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_access_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_getattrlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_getattr_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_getattrops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_getattr_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_lookuplat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_lookup_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_lookupops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_lookup_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_otherlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_other_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_otherops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_other_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_readdata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_read_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_readlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_read_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_readops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_read_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_totalops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_total_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_writedata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_write_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_writelat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_write_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="cifs_writeops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='cifs_write_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+  </xml-group>
+
+  <xml-group
+    name="netapp-volume-stats-fcp"
+    resource-type="NetAppVolumeStatsXML"
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()"> 
+    <xml-object name="fc_accesslat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_access_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_accessops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_access_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_getattrlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_getattr_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_getattrops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_getattr_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_lookuplat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_lookup_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_lookupops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_lookup_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_otherlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_other_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_otherops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_other_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_readdata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_read_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_readlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_read_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_readops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_read_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_totalops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_total_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_writedata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_write_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_writelat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_write_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="fc_writeops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='fcp_write_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+  </xml-group>
+
+  <xml-group
+    name="netapp-volume-stats-iscsi"
+    resource-type="NetAppVolumeStatsXML"
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()"> 
+    <xml-object name="iscsi_accesslat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_access_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_accessops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_access_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_getattrlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_getattr_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_getattrops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_getattr_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_lookuplat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_lookup_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_lookupops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_lookup_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_otherlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_other_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_otherops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_other_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_readdata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_read_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_readlat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_read_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_readops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_read_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_totalops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_total_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_writedata" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_write_data']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_writelat" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_write_latency']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="iscsi_writeops" type="COUNTER" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='iscsi_write_ops']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+  </xml-group> 
+
+  <xml-group
+    name="netapp-volume-stats-block"
+    resource-type="NetAppVolumeStatsXML"
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()">
+    <xml-object name="blks_total" type="GAUGE" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='wv_fsinfo_blks_total']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="blks_used" type="GAUGE" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='wv_fsinfo_blks_used']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="snap_reserve_pct" type="GAUGE" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='wv_fsinfo_blks_snap_reserve_pct']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+    <xml-object name="blks_reserve" type="GAUGE" xpath="*[local-name()='counters']/*[local-name()='counter-data']/*[text()='wv_fsinfo_blks_reserve']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text()" />
+  </xml-group>
+
+</xml-groups>
+
+<!-- //*[local-name()='counters']/*[local-name()='counter-data']/*[text()='instance_name']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text() -->
+<!-- //*[local-name()='instance-data']/*[local-name()='counters']/*[local-name()='counter-data']/*[local-name()='name' and text()='instance_name']/ancestor::*[local-name()='counter-data']/child::*[local-name()='value']/text() -->
+<!-- 
+    resource-xpath="//*[local-name()='instance-data']"
+    key-xpath="child::*[local-name()='name']/text()"> -->
