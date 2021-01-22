@@ -1,0 +1,532 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 4,
+  "iteration": 1611334367011,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "OpenNMS Performance",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "height": "250",
+      "id": 1,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "attribute": "$Protocolaccesslat",
+          "label": "$ProtocolAccess",
+          "nodeId": "$NetApp_Host",
+          "refId": "A",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolgetattrlat",
+          "label": "$ProtocolGet Attribute",
+          "nodeId": "$NetApp_Host",
+          "refId": "C",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocollookuplat",
+          "label": "$ProtocolLookup",
+          "nodeId": "$NetApp_Host",
+          "refId": "D",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolotherlat",
+          "label": "$ProtocolOther",
+          "nodeId": "$NetApp_Host",
+          "refId": "E",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolreadlat",
+          "label": "$ProtocolRead",
+          "nodeId": "$NetApp_Host",
+          "refId": "F",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolwritelat",
+          "label": "$ProtocolWrite",
+          "nodeId": "$NetApp_Host",
+          "refId": "G",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "$Protocol latency $Resource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "µs",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "OpenNMS Performance",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "height": "",
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "attribute": "$Protocolaccessops",
+          "label": "$ProtocolAccess Ops",
+          "nodeId": "$NetApp_Host",
+          "refId": "A",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolgetattrops",
+          "label": "$ProtocolGet Attribute Ops",
+          "nodeId": "$NetApp_Host",
+          "refId": "C",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocollookupops",
+          "label": "$ProtocolLookup Ops",
+          "nodeId": "$NetApp_Host",
+          "refId": "D",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolotherops",
+          "label": "$ProtocolOther Ops",
+          "nodeId": "$NetApp_Host",
+          "refId": "E",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolreadops",
+          "label": "$ProtocolRead Ops",
+          "nodeId": "$NetApp_Host",
+          "refId": "F",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolwriteops",
+          "label": "$ProtocolWrite Ops",
+          "nodeId": "$NetApp_Host",
+          "refId": "G",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "$Protocol Ops $Resource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "OpenNMS Performance",
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "height": "",
+      "id": 3,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "alias": "nfs_ KB Written",
+          "transform": "negative-Y"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [
+        {
+          "attribute": "$Protocolreaddata",
+          "label": "$Protocol KB Read",
+          "nodeId": "$NetApp_Host",
+          "refId": "A",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        },
+        {
+          "attribute": "$Protocolwritedata",
+          "label": "$Protocol KB Written",
+          "nodeId": "$NetApp_Host",
+          "refId": "C",
+          "resourceId": "$Resource",
+          "type": "attribute"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "$Protocol Throughput $Resource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "schemaVersion": 20,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "text": "",
+          "value": ""
+        },
+        "datasource": "OpenNMS Performance",
+        "definition": "",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "NetApp_Host",
+        "options": [],
+        "query": "nodeFilter(serviceName LIKE 'NetApp_SnapMirror')",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "isNone": true,
+          "text": "None",
+          "value": ""
+        },
+        "datasource": "OpenNMS Performance",
+        "definition": "",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "Resource",
+        "options": [],
+        "query": "nodeResources($NetApp_Host)",
+        "refresh": 2,
+        "regex": "/.*VserverStats.*/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "tags": [],
+          "text": "wafl_ + cifs_ + nfs_",
+          "value": [
+            "wafl_",
+            "cifs_",
+            "nfs_"
+          ]
+        },
+        "hide": 0,
+        "includeAll": true,
+        "label": null,
+        "multi": true,
+        "name": "Protocol",
+        "options": [
+          {
+            "selected": false,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": true,
+            "text": "wafl_",
+            "value": "wafl_"
+          },
+          {
+            "selected": true,
+            "text": "cifs_",
+            "value": "cifs_"
+          },
+          {
+            "selected": false,
+            "text": "fc_",
+            "value": "fc_"
+          },
+          {
+            "selected": false,
+            "text": "iscsi_",
+            "value": "iscsi_"
+          },
+          {
+            "selected": true,
+            "text": "nfs_",
+            "value": "nfs_"
+          }
+        ],
+        "query": "wafl_,cifs_,fc_,iscsi_,nfs_",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "NetApp Vserver Performance Statistics",
+  "uid": "000000004",
+  "version": 3
+}

@@ -8,6 +8,11 @@ and such, copy the netapp_gx.dtd included here to /etc/netapp_gx.dtd on your ope
 We authenticate using Basic auth, so you'll need to update the Authorization header in xml-datacollection-config.xml to use the correct credentials, for all three collection groups.
 
 == Graphs
-There are none included, and I dont have access to the Grafana graphs I built for this.  Sorry :(
+In the Grafana subdirectory, there are graphs for:
 
+  Node Performance Statistics
+  Vserver Performance Statistics
+  Volume Performance Statistics
+  Snapmirror Statistics
 
+You will likely have to massage these to make them work in your environment, specifically the node filters and resource filters used.
